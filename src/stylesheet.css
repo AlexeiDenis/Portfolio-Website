@@ -180,7 +180,7 @@ main {
 .introduction h1 span:nth-of-type(1),
 .introduction h1 span:nth-of-type(2) {
   font-size: clamp(1.1111111111111112rem, 2.5vw, 3.5555555555555554rem);
-  font-weight: var(--weightRegular);
+  font-weight: var(--weightMedium);
 }
 .introduction h1 span:nth-of-type(3),
 .introduction h1 span:nth-of-type(4) {
