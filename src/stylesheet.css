@@ -171,11 +171,7 @@ main {
   max-width: 650px;
   cursor:pointer;
 }
-.introduction .wrapper-image,
-.introduction h1 {
-  align-self: flex-end;
-  justify-self: flex-start;
-}
+
 .introduction .wrapper-scroll {
   grid-row: 2/2;
   grid-column: 1/-1;
@@ -230,6 +226,7 @@ main {
   align-self: center;
   justify-self: center;
 }
+
 .aboutMe {
   display: flex;
   flex-direction: column;
@@ -430,6 +427,11 @@ color:rgb(118, 168, 243);
   main {
     margin-block-start: 6em;
   }
+  .introduction .wrapper-image,
+.introduction h1 {
+  align-self: flex-end;
+  justify-self: flex-start;
+}
 
   .navigation .darkToggle {
     width: 65px;
