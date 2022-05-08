@@ -106,14 +106,14 @@ h2,
   display: flex;
   gap: 0.6em;
 }
-.navigation ul li:hover a{
-  color:var(--yellow);
+.navigation ul li:hover a {
+  color: var(--yellow);
 }
 .navigation ul li a {
   color: var(--headerLinksColor);
   font-weight: var(--weightRegular);
   font-size: clamp(0.6666666666666666rem, 2.5vw, 1.6rem);
-  transition: color .116s ease-in;
+  transition: color 0.116s ease-in;
 }
 
 .navigation .darkToggle {
@@ -169,7 +169,7 @@ main {
 .introduction .wrapper-image {
   min-width: 145px;
   max-width: 650px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .introduction .wrapper-scroll {
@@ -265,8 +265,8 @@ main {
 }
 .projects .slider .card > a,
 .projects .slider .card h3,
-.projects .slider .card .links{
-  flex:1;
+.projects .slider .card .links {
+  flex: 1;
 }
 
 .projects .slider .card > a {
@@ -326,7 +326,7 @@ main {
   align-items: center;
   justify-content: center;
   font-weight: var(--weightLight);
-  gap:0.2em;
+  gap: 0.2em;
   font-size: clamp(0.7777777777777778rem, 4.5vw, 1rem);
 }
 .contact ul {
@@ -373,17 +373,22 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
 }
 footer a {
   font-weight: var(--weightRegular);
   margin: 0;
   font-size: clamp(0.6666666666666666rem, 2.5vw, 1.3rem);
   color: var(--headerLinksColor);
-  transition: color .116s ease-in;
+  transition: color 0.116s ease-in;
 }
-footer a:hover{
-color:rgb(118, 168, 243);
+footer a:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+footer a:hover {
+  color: rgb(118, 168, 243);
 }
 
 @keyframes scroller {
@@ -428,10 +433,10 @@ color:rgb(118, 168, 243);
     margin-block-start: 6em;
   }
   .introduction .wrapper-image,
-.introduction h1 {
-  align-self: center;
-  justify-self: center;
-}
+  .introduction h1 {
+    align-self: center;
+    justify-self: center;
+  }
 
   .navigation .darkToggle {
     width: 65px;
