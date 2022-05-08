@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <meta name="Googlebot" content="noindex">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Alexei Denis - Portfolio">
     <meta name="description" content="Personal site and portfolio of frond-end developer Alexei Denis.">
@@ -16,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-   
-  
+
+
 </head>
 
 <body>
@@ -27,10 +25,10 @@
             <a href="#" title="To Homepage">
                 <div class="logo">
                     <div class="wrapper-image">
-                        <img src="./imagini/bird on head.webp" width="1592" height="1592" alt="">
+                        <img src="./imagini/birdonhead.webp" width="1592" height="1592" alt="">
                     </div>
                     <div class="wrapper-image">
-                        <img src="./imagini/bean bag chair chill.webp" width="1592" height="1592" alt="">
+                        <img src="./imagini/beanbagchairchill.webp" width="1592" height="1592" alt="">
                     </div>
                     <div class="wrapper-image">
                         <img src="./imagini/gaming.webp" width="1592" height="1592" alt="">
@@ -45,7 +43,7 @@
                 <li><a href="#Contact">Contact</a></li>
             </ul>
             <button aria-label="Toggle Dark Mode" id="toggler" class="darkToggle">
-                <img id="decoration" src="./imagini/sun.svg"  width="24" height="24" alt="">
+                <img id="decoration" src="./imagini/sun.svg" width="24" height="24" alt="">
             </button>
         </nav>
     </header>
@@ -58,26 +56,37 @@
                 <span>developer</span>
             </h1>
             <div class="wrapper-image">
-                <img src="../imagini/avatar.webp" width="1592" height="1592" alt="">
+                <img id="imgdecor" src="./imagini/avatar.webp" width="1592" height="1592" alt="">
             </div>
-            <p class="scroll">scroll</p>
+            <div class="wrapper-scroll">
+                <p class="scroll">scroll <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-arrow-down">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg></p>
+            </div>
+
         </section>
         <section id="About" class="aboutMe">
             <h2>About me</h2>
-            <p>My name is <span>Alexei Denis</span>. I graduated Bucharest <span>University of Economics Studies</span>
+            <p>My name is <span>Alexei Denis</span>. I graduated Bucharest University of Economics Studies
                 with the specialization
                 Account and Computer Science.</p>
-            <p>The <span>first interaction with front-end</span> was in my last year of high school when the computer
+            <p>The <span>first interaction with front-end development</span> was in my last year of high school when the
+                computer
                 science teacher
                 introduced us to <abbr title="HyperText Markup Language">HTML</abbr>. It was fascinating how a few lines
                 of code can have an immediate impact on the
-                page. Thus, for the certificate in information technology, I made a website that shows <span>places to visit
+                page. Thus, for the certificate in information technology, I made a <span>website that shows places to
+                    visit
                     in
-                    Romania</span> . I loved so much working on it, but at the moment I thought this work did not exist
+                    Romania</span>. Also, this was <span>my first website that i've made</span> . I loved working on it
+                so much , but at the moment I thought this work did not exist
                 in the real
                 world. If you are not a good mathematician and if you don't know algorithms you will not have a place
                 in the IT world. So I took a different road. </p>
-            <p> At the University, I had some programming classes and waked
+            <p> At the University, I had some programming classes and woke
                 up my desire to make websites.</p>
             <p> After graduating from University I took a break for a month or two, then I <span>learned by
                     myself
@@ -85,47 +94,239 @@
         </section>
         <section id="Projects" class="projects">
             <h2>Projects</h2>
-        </section>
-        <section id="Contact" class="contact">
-            <h2>Contact</h2>
-            <ul class="wrapper-dimension">
-                <li>
-                    <a aria-label="Github" href="https://github.com/AlexeiDenis" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-github">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>Github</a>
-                </li>
-                <li>
-                    <a href="mailto:denisalexandrualexei@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-mail">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg> Mail</a>
-                </li>
-                <li>
-                    <a aria-label="LinkedIn" href="https://www.linkedin.com/in/denis-alexandru-alexei/" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-linkedin">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg> LinkedIn</a>
-                </li>
-            </ul>
+            <div class="slider">
+                <div class="card">
+                    <a title="To Auction Website GitHub Page" href="https://github.com/AlexeiDenis/LicentaAlexeiDenis"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/homepage.webp" width="1737" height="947"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>C&#35;&#44; ADO&#46;NET&#44; Entity Framework</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Auction Website GitHub Page"
+                            href="https://github.com/AlexeiDenis/LicentaAlexeiDenis" rel="noopener noreferrer"
+                            target="_blank">Auction bidding website</a> </h3>
+                    <div class="links">
+
+                        <p> <a aria-label="GitHub Link" href="https://github.com/AlexeiDenis/LicentaAlexeiDenis"
+                                rel="noopener noreferrer" target="_blank">source code <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg></a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Subs.ro Page" href="https://subs-ro-vue-alexeidenis.vercel.app/"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/subsPage.webp" width="5120" height="2680"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>Vue Js&#46;&#44; HTML&#44; CSS</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Subs.ro Page" href="https://subs-ro-vue-alexeidenis.vercel.app/"
+                            rel="noopener noreferrer" target="_blank">Subs.ro Mobile Version</a> </h3>
+                    <div class="links">
+                        <p><a title="To Subs.ro Page" href="https://subs-ro-vue-alexeidenis.vercel.app/"
+                                rel="noopener noreferrer" target="_blank">live demo <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+                        <p> <a aria-label="GitHub Link"
+                                href="https://github.com/AlexeiDenis/Subs.ro-Vue/tree/main/subs-vue"
+                                rel="noopener noreferrer" target="_blank">source code <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg></a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Landing Page" href="https://landing-page-alexeidenis.vercel.app/"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/landing-page.webp" width="1794" height="965"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>CSS&#44; HTML&#44; Javascript</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Landing Page" href="https://landing-page-alexeidenis.vercel.app/"
+                            rel="noopener noreferrer" target="_blank">Landing Page</a> </h3>
+                    <div class="links">
+                        <p><a title="To Landing Page" href="https://landing-page-alexeidenis.vercel.app/"
+                                rel="noopener noreferrer" target="_blank">live demo <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+                        <p> <a aria-label="GitHub Link" href="https://github.com/AlexeiDenis/Landing-Page/tree/main/src"
+                                rel="noopener noreferrer" target="_blank">source code <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg></a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Spelling sign language Page"
+                        href="https://spelling-sign-language-alexeidenis.vercel.app/" rel="noopener noreferrer"
+                        target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/spelling.webp" width="1794" height="897"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>CSS&#44; HTML&#44; Javascript</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Spelling sign language Page"
+                            href="https://spelling-sign-language-alexeidenis.vercel.app/" rel="noopener noreferrer"
+                            target="_blank">Spelling sign language</a> </h3>
+                    <div class="links">
+                        <p><a title="To Spelling sign language Page"
+                                href="https://spelling-sign-language-alexeidenis.vercel.app/" rel="noopener noreferrer"
+                                target="_blank">live demo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+                        <p> <a aria-label="GitHub Link" href="https://github.com/AlexeiDenis/Spelling-Sign-Language"
+                                rel="noopener noreferrer" target="_blank">source code <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg></a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Music Arrangement Game Page" href="https://music-arrangement.vercel.app/"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/music.webp" width="1794" height="921"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>CSS&#44; HTML&#44; Javascript</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Music Arrangement Game Page" href="https://music-arrangement.vercel.app/"
+                            rel="noopener noreferrer" target="_blank">Music Arrangement Game</a> </h3>
+                    <div class="links">
+                        <p><a title="To Music Arrangement Game Page" href="https://music-arrangement.vercel.app/"
+                                rel="noopener noreferrer" target="_blank">live demo <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+                        <p> <a aria-label="GitHub Link" href="https://github.com/AlexeiDenis/Music-Arrangement"
+                                rel="noopener noreferrer" target="_blank">source code <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg></a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Coin Flipper Page" href="https://codepen.io/Nouth/full/abEWqWL"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/coinflipper.webp" width="1794" height="912"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>CSS&#44; HTML&#44; Javascript</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Coin Flipper Page" href="https://codepen.io/Nouth/full/abEWqWL"
+                            rel="noopener noreferrer" target="_blank">Coin Flipper</a> </h3>
+                    <div class="links">
+                        <p><a title="To Coin Flipper Page" href="https://codepen.io/Nouth/full/abEWqWL"
+                                rel="noopener noreferrer" target="_blank">live demo <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <a title="To Choices Game Page" href="https://codepen.io/Nouth/full/Vwydwmw"
+                        rel="noopener noreferrer" target="_blank">
+                        <div class="wrapper-image">
+
+                            <img loading="lazy" src="./imagini/choicesGame.webp" width="1797" height="897"
+                                alt="Auction Website">
+                        </div>
+                        <div class="tehnologies">
+                            <p>CSS&#44; HTML&#44; Javascript Module Pattern</p>
+                        </div>
+                    </a>
+                    <h3> <a title="To Choices Game Page" href="https://codepen.io/Nouth/full/Vwydwmw"
+                            rel="noopener noreferrer" target="_blank">Choices Game</a> </h3>
+                    <div class="links">
+                        <p><a title="To Choices Game Page" href="https://codepen.io/Nouth/full/Vwydwmw"
+                                rel="noopener noreferrer" target="_blank">live demo <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg></a></p>
+
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
     <footer>
-        <p>&#169; Alexei Denis</p>
+        <h4>&#169; Alexei Denis</h4>
 
     </footer>
     <script src="index.js"></script>
