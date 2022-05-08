@@ -66,6 +66,7 @@ h2 {
   font-weight: var(--weightSemiBold);
   text-decoration-line: underline;
   text-decoration-style: double;
+
   text-decoration-color: var(--purple);
   font-size: clamp(1.5rem, 4.5vw, 3rem);
 }
@@ -164,6 +165,7 @@ main {
 .introduction .wrapper-image {
   min-width: 145px;
   max-width: 650px;
+  cursor:pointer;
 }
 .introduction .wrapper-image,
 .introduction h1 {
@@ -210,6 +212,7 @@ main {
   font-size: clamp(1.7777777777777777rem, 4.5vw, 5.777777777777778rem);
   text-decoration-line: underline;
   text-decoration-style: solid;
+
   text-decoration-thickness: 6px;
 }
 .introduction h1 span:nth-of-type(3) {
@@ -238,6 +241,7 @@ main {
 .aboutMe p span {
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-underline-position: under;
   text-decoration-thickness: 5px;
   text-decoration-color: var(--yellow);
 }
@@ -253,6 +257,11 @@ main {
   border-bottom: 1px solid black;
   padding: 1em;
 }
+.projects .slider .card > a,
+.projects .slider .card h3,
+.projects .slider .card .links{
+  flex:1;
+}
 
 .projects .slider .card > a {
   position: relative;
@@ -262,7 +271,6 @@ main {
 }
 .projects .slider .card > a:hover .wrapper-image img,
 .projects .slider .card > a:focus .wrapper-image img {
-  filter: sepia(40%);
   transform: scale(1.05) rotate(1deg);
 }
 .projects .slider .card > a .wrapper-image img {
@@ -290,8 +298,9 @@ main {
   color: var(--text);
   text-decoration-line: underline;
   text-decoration-style: solid;
+  text-underline-position: under;
   text-decoration-color: var(--purple);
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 3px;
   font-size: clamp(1.1111111111111112rem, 4.5vw, 1.8rem);
   font-weight: var(--weightMedium);
 }
@@ -311,7 +320,7 @@ main {
   align-items: center;
   justify-content: center;
   font-weight: var(--weightLight);
-
+  gap:0.2em;
   font-size: clamp(0.7777777777777778rem, 4.5vw, 1rem);
 }
 .contact ul {
@@ -359,10 +368,10 @@ footer {
   align-items: center;
   justify-content: center;
 }
-footer h4 {
+footer a {
   font-weight: var(--weightRegular);
   margin: 0;
-  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.6rem);
+  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.3rem);
   color: var(--headerLinksColor);
 }
 
