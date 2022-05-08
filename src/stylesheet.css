@@ -42,6 +42,7 @@ body {
   padding: 0;
   background-color: var(--backgroundBody);
   overflow-x: hidden;
+  will-change:background-color;
   transition: background-color 0.4s cubic-bezier(0, 0, 0.3, 1);
 }
 a,
@@ -82,6 +83,7 @@ header {
 h2,
 .aboutMe p {
   color: var(--text);
+  will-change:color;
   transition: color 0.4s cubic-bezier(0, 0, 0.38, 0.9);
 }
 .wrapper-dimension {
