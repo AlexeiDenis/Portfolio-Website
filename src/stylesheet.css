@@ -106,10 +106,14 @@ h2,
   display: flex;
   gap: 0.6em;
 }
+.navigation ul li:hover a{
+  color:var(--yellow);
+}
 .navigation ul li a {
   color: var(--headerLinksColor);
   font-weight: var(--weightRegular);
   font-size: clamp(0.6666666666666666rem, 2.5vw, 1.6rem);
+  transition: color .116s ease-in;
 }
 
 .navigation .darkToggle {
@@ -366,13 +370,18 @@ footer {
   background-color: var(--headerBackground);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  
 }
 footer a {
   font-weight: var(--weightRegular);
   margin: 0;
   font-size: clamp(0.6666666666666666rem, 2.5vw, 1.3rem);
   color: var(--headerLinksColor);
+  transition: color .116s ease-in;
+}
+footer a:hover{
+color:rgb(118, 168, 243);
 }
 
 @keyframes scroller {
