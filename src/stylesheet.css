@@ -223,8 +223,8 @@ main {
 }
 .introduction .wrapper-image,
 .introduction h1 {
-  align-self: center;
-  justify-self: center;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .aboutMe {
@@ -429,8 +429,8 @@ color:rgb(118, 168, 243);
   }
   .introduction .wrapper-image,
 .introduction h1 {
-  align-self: flex-end;
-  justify-self: flex-start;
+  align-self: center;
+  justify-self: center;
 }
 
   .navigation .darkToggle {
