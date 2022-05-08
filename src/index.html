@@ -9,11 +9,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Alexei Denis - Portfolio">
     <meta name="description" content="Personal site and portfolio of frond-end developer Alexei Denis.">
+    <meta name="theme-color" content="#fffcfc">
     <link rel="stylesheet" href="stylesheet.css">
+    <title>Alexei Denis - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Alexei Denis - Portfolio</title>
+   
+  
 </head>
 
 <body>
@@ -23,13 +26,13 @@
             <a href="#" title="To Homepage">
                 <div class="logo">
                     <div class="wrapper-image">
-                        <img src="../imagini/bird on head.webp" alt="">
+                        <img src="../imagini/bird on head.webp" width="1592" height="1592" alt="">
                     </div>
                     <div class="wrapper-image">
-                        <img src="../imagini/bean bag chair chill.webp" alt="">
+                        <img src="../imagini/bean bag chair chill.webp" width="1592" height="1592" alt="">
                     </div>
                     <div class="wrapper-image">
-                        <img src="../imagini/gaming.webp" alt="">
+                        <img src="../imagini/gaming.webp" width="1592" height="1592" alt="">
                     </div>
                 </div>
             </a>
@@ -40,7 +43,9 @@
                 <li><a href="#Projects" title="Go to Projects section">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
-            <button class="darkToggle">x</button>
+            <button id="toggler" class="darkToggle">
+                <img id="decoration" src="../imagini/sun.svg" alt="">
+            </button>
         </nav>
     </header>
     <main class="wrapper-dimension">
@@ -52,24 +57,30 @@
                 <span>developer</span>
             </h1>
             <div class="wrapper-image">
-                <img src="../imagini/avatar.webp" alt="">
+                <img src="../imagini/avatar.webp" width="1592" height="1592" alt="">
             </div>
             <p class="scroll">scroll</p>
         </section>
         <section id="About" class="aboutMe">
             <h2>About me</h2>
-            <p>My name is <span>Alexei Denis</span>. I graduated Bucharest <span>University of Economics Studies</span> with the specialization
+            <p>My name is <span>Alexei Denis</span>. I graduated Bucharest <span>University of Economics Studies</span>
+                with the specialization
                 Account and Computer Science.</p>
-            <p>The <span>first interaction with front-end</span> was in my last year of high school when the computer science teacher
+            <p>The <span>first interaction with front-end</span> was in my last year of high school when the computer
+                science teacher
                 introduced us to <abbr title="HyperText Markup Language">HTML</abbr>. It was fascinating how a few lines
                 of code can have an immediate impact on the
-                page. Thus, for the certificate in information technology, I made a website with <span>places to visit in
-                    Romania</span> . I loved so much working on it, but at the moment I thought this work did not exist in the real
-                world. If you are not a good mathematician and do not know to make algorithms you will not have a place
-                in the IT world. So I took a different road. At the University, I had some programming classes and waked
+                page. Thus, for the certificate in information technology, I made a website with <span>places to visit
+                    in
+                    Romania</span> . I loved so much working on it, but at the moment I thought this work did not exist
+                in the real
+                world. If you are not a good mathematician and don't know algorithms you will not have a place
+                in the IT world. So I took a different road. </p>
+            <p> At the University, I had some programming classes and waked
                 up my desire to make websites.</p>
-            <p> After graduating from University I took a "gap year" for only one month or two, then I <span>learned by myself
-                from courses and online resources</span>.</p>
+            <p> After graduating from University I took a break for only one month or two, then I <span>learned by
+                    myself
+                    from courses and online resources</span>.</p>
         </section>
         <section id="Projects" class="projects">
             <h2>Projects</h2>
@@ -117,6 +128,7 @@
 
     </footer>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/@oddbird/css-toggles@1.0.2/dist/css-toggles.min.js" type="module"></script>
 </body>
 
 </html>

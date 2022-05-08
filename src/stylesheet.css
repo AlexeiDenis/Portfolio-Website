@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --headerBackground: #67636c;
+  --headerBackground: #131313;
   --headerLinksColor: #fffcfc;
   --headerLinkActive: #20f984;
   --weightRegular: 400;
@@ -14,18 +14,35 @@
   --purple: #4a208e;
   --yellow: #d3a52c;
   --backgroundBody: #fffcfc;
-  
+  --text: black;
 }
 html {
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   scroll-behavior: smooth;
+  toggle-root: bec;
 }
+
+html:toggle(bec) {
+  --text: #f3e9e9;
+  --backgroundBody: #161414;
+  img {
+    filter: brightness(75%);
+  }
+  header {
+    border-bottom: 1px solid var(--text);
+  }
+  footer {
+    border-top: 1px solid var(--text);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: var(--backgroundBody);
   overflow-x: hidden;
+  transition: background-color 0.4s cubic-bezier(0, 0, 0.3, 1);
 }
 a,
 ul,
@@ -36,23 +53,37 @@ li {
 }
 .navigation ul li a:active {
   color: var(--headerLinkActive);
- 
 }
 h2 {
   font-weight: var(--weightSemiBold);
   text-decoration-line: underline;
   text-decoration-style: double;
-  text-decoration-color: var(--purple) ;
-  font-size:clamp(1.5rem,4.5vw,3rem);
+  text-decoration-color: var(--purple);
+  font-size: clamp(1.5rem, 4.5vw, 3rem);
 }
 li {
   list-style-type: none;
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   background-color: var(--headerBackground);
   padding-block: 0.6em;
+  z-index: 999;
+}
+::selection {
+  background-color: #131313;
+  color: var(--headerLinkActive);
 }
 
+.introduction h1,
+h2,
+.aboutMe p {
+  color: var(--text);
+  transition: color 0.4s cubic-bezier(0, 0, 0.38, 0.9);
+}
 .wrapper-dimension {
   width: 95%;
   margin-inline: auto;
@@ -69,13 +100,18 @@ header {
 .navigation ul li a {
   color: var(--headerLinksColor);
   font-weight: var(--weightRegular);
-  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.7777777777777777rem);
+  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.6rem);
 }
+
 .navigation .darkToggle {
-  border: none;
-  outline: none;
-  position: relative;
-  background-color: #20f984;
+  border: 1px solid #eff1f0;
+  width: 25px;
+  display: grid;
+  place-content: center;
+  height: 35px;
+  background-color: inherit;
+  border-radius: 5px;
+  toggle-trigger: bec;
 }
 
 .logo {
@@ -92,7 +128,7 @@ header {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  /* animation: animatie 10s cubic-bezier(0, 0, 0.38, 0.9) alternate 4 0.5s; */
+  animation: animatie 10s cubic-bezier(0, 0, 0.38, 0.9) alternate 8 2s;
 }
 .logo .wrapper-image img {
   width: 100%;
@@ -102,12 +138,14 @@ header {
 }
 main {
   background-color: inherit;
+  margin-block-start: 2em;
 }
 .introduction {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100vh;
+  position: relative;
 }
 
 .introduction .wrapper-image img {
@@ -132,6 +170,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-weight: var(--weightRegular);
+  color: var(--text);
 }
 .introduction h1 {
   margin: 0;
@@ -141,10 +180,11 @@ main {
 .introduction h1 span:nth-of-type(1),
 .introduction h1 span:nth-of-type(2) {
   font-size: clamp(1.1111111111111112rem, 2.5vw, 3.5555555555555554rem);
-  font-weight: var(--weightMedium);
+  font-weight: var(--weightRegular);
 }
 .introduction h1 span:nth-of-type(3),
 .introduction h1 span:nth-of-type(4) {
+  line-height: 1.1;
   font-weight: var(--weightSemiBold);
   font-size: clamp(1.7777777777777777rem, 4.5vw, 5.777777777777778rem);
   text-decoration-line: underline;
@@ -158,7 +198,7 @@ main {
   text-decoration-color: var(--yellow);
 }
 .aboutMe {
-  padding-block-end: 2em;
+  padding-block: 5em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -167,37 +207,35 @@ main {
 .aboutMe p {
   font-weight: var(--weightRegular);
   max-width: 62ch;
-  font-size:clamp(1rem,2.5vw,1.6rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
   margin: 0;
 }
-.aboutMe p span{
-   position:relative;
+.aboutMe p span {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 5px;
+  text-decoration-color: var(--yellow);
 }
-.aboutMe p span::before{
-    position:absolute;
-    content:'';
-    width:100%;
-    height:3px;
-    bottom:0;
-    left:0;
-    background-color: #219D5A;
-    /* animation:decoration 3s cubic-bezier(0.14, 0.33, 0.99, 0.81) 14 alternate ; */
+.contact {
+  padding-block: 2em;
 }
-
 .contact ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  
 }
-.contact ul li:hover{background-color:blue; width: max-content;}
+.contact ul li:hover {
+  color: #20f984;
+  width: max-content;
+}
+
 .contact ul li a {
   text-decoration: none;
-  color: currentColor;
+  color: var(--text);
   gap: 0.3em;
   display: flex;
   align-items: center;
-  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.7777777777777777rem);
+  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.8rem);
 }
 
 footer {
@@ -207,6 +245,7 @@ footer {
   align-items: center;
   justify-content: center;
   color: var(--headerLinksColor);
+  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.8rem);
 }
 
 @keyframes animatie {
@@ -224,23 +263,67 @@ footer {
   }
 }
 
-@keyframes decoration{
-    0%{
-        width:1%;
-    }
-    5%{
-        width:12%;
-    }
-    10%{
-        width:42%;
-    }
-    30%{
-        width:75%;
-    }
-    65%{
-        width:42%;
-    }
-    90%, 100%{
-        width:100%;
-    }
+@media (min-width: 1440px) {
+  .logo {
+    height: 120px;
+    --dimension: -120px;
+  }
+  .logo .wrapper-image {
+    width: 120px;
+    height: 120px;
+  }
+  .navigation ul {
+    gap: 4em;
+  }
+  .aboutMe p {
+    max-width: 100%;
+  }
+  main {
+    margin-block-start: 6em;
+  }
+  .introduction .wrapper-image,
+  .introduction h1 {
+    align-self: center;
+    justify-self: center;
+  }
+  .navigation .darkToggle {
+    width: 65px;
+    height: 105px;
+  }
+  .navigation .darkToggle img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .introduction h1 span:nth-of-type(3),
+  .introduction h1 span:nth-of-type(4) {
+    text-decoration-thickness: 11px;
+  }
+  .logo {
+    height: 260px;
+    --dimension: -260px;
+  }
+  .aboutMe {
+    padding-block: 12rem;
+  }
+  .logo .wrapper-image {
+    width: 260px;
+    height: 260px;
+  }
+  .navigation .darkToggle {
+    width: 155px;
+    height: 155px;
+  }
+  .navigation .darkToggle img {
+    width: 105px;
+    height: 105px;
+  }
+  main {
+    margin-block-start: 12em;
+  }
+  .introduction .scroll {
+    font-size: 1.8rem;
+  }
 }
