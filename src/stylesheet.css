@@ -225,6 +225,11 @@ main {
 .introduction h1 span:nth-of-type(4) {
   text-decoration-color: var(--yellow);
 }
+.introduction .wrapper-image,
+.introduction h1 {
+  align-self: center;
+  justify-self: center;
+}
 .aboutMe {
   display: flex;
   flex-direction: column;
@@ -425,11 +430,7 @@ color:rgb(118, 168, 243);
   main {
     margin-block-start: 6em;
   }
-  .introduction .wrapper-image,
-  .introduction h1 {
-    align-self: center;
-    justify-self: center;
-  }
+
   .navigation .darkToggle {
     width: 65px;
     height: 105px;
