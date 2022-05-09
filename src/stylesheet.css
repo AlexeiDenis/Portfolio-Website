@@ -244,13 +244,13 @@ main {
   font-size: clamp(1rem, 2.5vw, 2rem);
   margin: 0;
 }
-.aboutMe p span {
+/* .aboutMe p span {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-underline-position: under;
   text-decoration-thickness: 5px;
   text-decoration-color: var(--yellow);
-}
+} */
 .projects .slider {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
