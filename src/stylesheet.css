@@ -42,7 +42,9 @@ html:toggle(bec) {
   .projects .slider .card {
     border-bottom: 1px solid var(--text);
   }
-  .aboutMe p b{color:#f6cb58;}
+  .aboutMe p b {
+    color: #f6cb58;
+  }
 }
 
 body {
@@ -252,16 +254,9 @@ main {
   gap: 2em;
 }
 .projects .slider .card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
   border-bottom: 1px solid black;
   padding: 1em;
-}
-.projects .slider .card > a,
-.projects .slider .card h3,
-.projects .slider .card .links {
-  flex: 1;
+  position: relative;
 }
 
 .projects .slider .card > a {
@@ -272,12 +267,18 @@ main {
 }
 .projects .slider .card > a:hover .wrapper-image img,
 .projects .slider .card > a:focus .wrapper-image img {
-  transform: scale(1.05) rotate(1deg);
+  object-position: bottom;
 }
 .projects .slider .card > a .wrapper-image img {
   max-inline-size: 100%;
   block-size: auto;
   object-fit: cover;
+  aspect-ratio: 16/9;
+  object-position: top;
+  transition: object-position 1s linear;
+}
+.projects .slider .card > a .wrapper-image .specialOne {
+  transition-duration: 11s;
 }
 .projects .slider .card > a .tehnologies {
   position: absolute;
@@ -293,7 +294,9 @@ main {
   color: var(--yellow);
   margin: 0;
 }
-
+.projects .slider .card h3 {
+  margin-block: 2em;
+}
 .projects .slider .card h3 a {
   margin: 0;
   color: var(--text);
@@ -311,6 +314,8 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1em;
+  position: absolute;
+  bottom: 0;
 }
 .projects .slider .card .links p {
   margin: 0;
