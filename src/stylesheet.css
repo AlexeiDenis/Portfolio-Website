@@ -42,7 +42,8 @@ html:toggle(bec) {
   .projects .slider .card {
     border-bottom: 1px solid var(--text);
   }
-  .aboutMe p b {
+  .aboutMe p b,
+  .projects .slider .card .details p span {
     color: #f6cb58;
   }
 }
@@ -244,7 +245,7 @@ main {
 .aboutMe p {
   font-weight: var(--weightRegular);
   max-width: 62ch;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
   margin: 0;
 }
 
@@ -294,8 +295,18 @@ main {
   color: var(--yellow);
   margin: 0;
 }
-.projects .slider .card h3 {
-  margin-block: 2em;
+.projects .slider .card .details p {
+  font-size: 0.8rem;
+  color: var(--text);
+  font-weight: var(--weightLight);
+}
+.projects .slider .card .details p a {
+  color: var(--text);
+  text-decoration-style: solid;
+  text-decoration: underline;
+}
+.projects .slider .card .details p span {
+  font-weight: bold;
 }
 .projects .slider .card h3 a {
   margin: 0;
@@ -411,6 +422,14 @@ footer a:hover {
   }
 }
 
+@media (min-width: 1024px){
+  .projects .slider {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .slider .card > a .wrapper-image img {
+    aspect-ratio: 1/1;
+  }
+}
 @media (min-width: 1440px) {
   .logo {
     height: 160px;
