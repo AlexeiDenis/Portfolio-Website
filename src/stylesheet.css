@@ -18,7 +18,8 @@
   --colorSpan: black;
   --colorBorder: #131313;
   --filterIMG: brightness(100%);
-  --colorCard:rgb(240, 241, 241);
+  --colorCard: rgb(240, 241, 241);
+  --linkHovColor: #20f984;
 }
 html[data-theme="light"] {
   --backgroundBody: #fffcfc;
@@ -26,17 +27,17 @@ html[data-theme="light"] {
   --colorSpan: black;
   --colorBorder: #131313;
   --filterIMG: brightness(100%);
-  --colorCard:#f7f7f781;
+  --colorCard: #f7f7f781;
 }
 
 html[data-theme="dark"] {
   --backgroundBody: #161414;
   --text: #fffcfc;
   --colorSpan: #f6cb58;
-  --colorBorder:#f3e9e9;
+  --colorBorder: #f3e9e9;
   --filterIMG: brightness(75%);
-  --colorCard:rgb(31, 30, 30);
-  --purple:#9156f1;
+  --colorCard: rgb(31, 30, 30);
+  --purple: #9156f1;
 }
 
 [data-theme="dark"] .sun-and-moon > .sun-beams {
@@ -303,14 +304,14 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   row-gap: 2em;
-  column-gap:4em;
+  column-gap: 4em;
 }
 .projects .slider .card {
   border: 3px solid rgba(138, 138, 233, 0.24);
   padding: 1em;
   position: relative;
   background-color: var(--colorCard);
-  border-radius:  20px 20px 11px 11px;
+  border-radius: 20px 20px 11px 11px;
 }
 
 .projects .slider .card > a {
@@ -349,17 +350,17 @@ main {
   margin: 0;
 }
 .projects .slider .card .details {
-  padding-block-end: .8em;
-  display:flex;
-  flex-direction:column;
-  gap:.8em;
+  padding-block-end: 3.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
   justify-content: space-evenly;
 }
 .projects .slider .card .details p {
   font-size: 0.8rem;
   color: var(--text);
-  font-weight: var(--weightMedium);
-  line-height:1.6;
+  font-weight: var(--weightRegular);
+  line-height: 1.6;
 }
 .projects .slider .card .details p a {
   color: var(--text);
@@ -370,11 +371,11 @@ main {
   font-weight: bold;
 }
 .projects .slider .card .details p {
-  margin:0;
+  margin: 0;
 }
 
-.projects .slider .card h3{
-  margin-block:0.8em;
+.projects .slider .card h3 {
+  margin-block: 0.8em;
 }
 .projects .slider .card h3 a {
   margin: 0;
@@ -390,12 +391,11 @@ main {
 
 .projects .slider .card .links {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   gap: 1em;
   position: absolute;
-  bottom: 0;
+  bottom: 0.6em;
 }
+
 .projects .slider .card .links p {
   margin: 0;
 }
@@ -405,9 +405,32 @@ main {
   align-items: center;
   justify-content: center;
   font-weight: var(--weightLight);
-  gap: 0.2em;
+  gap: 0.3em;
+  padding: 0.6em;
   font-size: clamp(0.7777777777777778rem, 4.5vw, 1rem);
+  position: relative;
+  z-index: 1;
 }
+.projects .slider .card .links a::before {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  transform: scaleX(0.02) scaleY(0.3);
+  transform-origin: left center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0, 0, 0.3, 1);
+  background-color: rgba(138, 138, 233, 0.24);
+  z-index: -1;
+}
+
+.projects .slider .card .links p a:hover::before {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
 .contact ul {
   display: flex;
   flex-direction: row;
