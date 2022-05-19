@@ -18,6 +18,7 @@
   --colorSpan: black;
   --colorBorder: #131313;
   --filterIMG: brightness(100%);
+  --colorCard:rgb(240, 241, 241);
 }
 html[data-theme="light"] {
   --backgroundBody: #fffcfc;
@@ -25,16 +26,18 @@ html[data-theme="light"] {
   --colorSpan: black;
   --colorBorder: #131313;
   --filterIMG: brightness(100%);
+  --colorCard:#f7f7f781;
 }
 
 html[data-theme="dark"] {
   --backgroundBody: #161414;
-  --text: #f3e9e9;
+  --text: #fffcfc;
   --colorSpan: #f6cb58;
-  --colorBorder: #fffcfc;
+  --colorBorder:#f3e9e9;
   --filterIMG: brightness(75%);
+  --colorCard:rgb(31, 30, 30);
+  --purple:#9156f1;
 }
-
 
 [data-theme="dark"] .sun-and-moon > .sun-beams {
   opacity: 0;
@@ -57,7 +60,6 @@ html[data-theme="dark"] {
   stroke: white;
   stroke-width: 1px;
 }
-
 
 html {
   font-size: 18px;
@@ -84,11 +86,11 @@ section:first-of-type::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background-size: 1.75rem 1.75rem;
   background-position: 0 0, 0.375rem 0.375rem;
+  background-size: 1.75rem 1.75rem;
   clip-path: polygon(0 61%, 0 30%, 11% 31%, 12% 60%);
   animation: particles 2s cubic-bezier(0.29, 0.04, 0.23, 1) forwards;
-  background-image: radial-gradient(var(--purple) 15%, transparent 15%);
+  background-image: radial-gradient(var(--purple) 11%, transparent 11%);
 }
 
 body {
@@ -173,7 +175,7 @@ h2,
   border: none;
   width: 25px;
   display: grid;
-  place-content: center; 
+  place-content: center;
   height: 35px;
   background-color: inherit;
   border-radius: 5px;
@@ -300,12 +302,15 @@ main {
 .projects .slider {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2em;
+  row-gap: 2em;
+  column-gap:4em;
 }
 .projects .slider .card {
-  border-bottom: 1px solid var(--colorBorder);
+  border: 3px solid rgba(138, 138, 233, 0.24);
   padding: 1em;
   position: relative;
+  background-color: var(--colorCard);
+  border-radius:  20px 20px 11px 11px;
 }
 
 .projects .slider .card > a {
@@ -336,7 +341,7 @@ main {
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.78);
   border-radius: 4px;
-  padding: 0.6em;
+  padding: 0.5em;
 }
 .projects .slider .card > a .tehnologies p {
   font-weight: var(--weightLight);
@@ -344,12 +349,17 @@ main {
   margin: 0;
 }
 .projects .slider .card .details {
-  padding-block-end: 1.5em;
+  padding-block-end: .8em;
+  display:flex;
+  flex-direction:column;
+  gap:.8em;
+  justify-content: space-evenly;
 }
 .projects .slider .card .details p {
   font-size: 0.8rem;
   color: var(--text);
-  font-weight: var(--weightLight);
+  font-weight: var(--weightMedium);
+  line-height:1.6;
 }
 .projects .slider .card .details p a {
   color: var(--text);
@@ -358,6 +368,13 @@ main {
 }
 .projects .slider .card .details p span {
   font-weight: bold;
+}
+.projects .slider .card .details p {
+  margin:0;
+}
+
+.projects .slider .card h3{
+  margin-block:0.8em;
 }
 .projects .slider .card h3 a {
   margin: 0;
@@ -368,7 +385,7 @@ main {
   text-decoration-color: var(--purple);
   text-decoration-thickness: 3px;
   font-size: clamp(1.1111111111111112rem, 4.5vw, 1.8rem);
-  font-weight: var(--weightMedium);
+  font-weight: var(--weightSemiBold);
 }
 
 .projects .slider .card .links {
