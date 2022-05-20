@@ -61,3 +61,25 @@ window
         theme.value = isDark ? 'dark' : 'light'
         setPreference()
     })
+
+window.addEventListener('DOMContentLoaded', setup);
+
+
+function setup() {
+    const options = {
+        rootMargin: '0px 0px -120px 0px'
+    }
+    const observ = new IntersectionObserver((intrari, obs) => {
+        intrari.forEach(entr => {
+            if (entr.isIntersecting) {
+                entr.target.classList.add('show');
+                // obs.unobserve(entr.target);
+            }
+            else { entr.target.classList.remove('show'); }
+        })
+    }, options);
+    const h1 = document.querySelectorAll('.aboutMe p');
+    h1.forEach(p => observ.observe(p));
+}
+
+

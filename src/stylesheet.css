@@ -292,6 +292,14 @@ main {
   max-width: 62ch;
   font-size: clamp(1rem, 2.5vw, 1.8rem);
   margin: 0;
+  opacity: 0;
+  position: relative;
+  bottom: -15px;
+  transition: all 0.8s ease-out;
+}
+.aboutMe p.show {
+  opacity: 1;
+  bottom: 0;
 }
 
 .projects .slider {
@@ -382,6 +390,7 @@ main {
   font-size: clamp(1.1111111111111112rem, 4.5vw, 1.8rem);
   font-weight: var(--weightSemiBold);
 }
+
 
 .projects .slider .card .links {
   display: flex;
