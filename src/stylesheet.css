@@ -48,12 +48,6 @@ html[data-theme="dark"] {
   transform: translate(-7px);
 }
 
-@supports (cx: 1) {
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
-    transform: translate(0);
-    cx: 17;
-  }
-}
 .sun-and-moon > :is(.moon, .sun) {
   fill: white;
 }
