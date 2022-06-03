@@ -343,7 +343,6 @@ main {
   right: 0;
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0.78);
-  border-radius: 4px;
   padding: 0.5em;
 }
 .projects .slider .card > a .tehnologies p {
