@@ -352,12 +352,7 @@ main {
   bottom: 0.7ex;
   right: 0;
   pointer-events: none;
-<<<<<<< HEAD
   background-color: var(--colorGlass);
-
-=======
-background-color: var(--colorGlass);
->>>>>>> 28a01031e7c96264cb2c0c7e80e841c33d72efab
   padding: 0.5em;
 }
 .projects .slider .card > a .tehnologies p {
