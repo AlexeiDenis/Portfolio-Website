@@ -1,7 +1,18 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./font/Inter-roman.var.woff2") format("woff2");
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+@supports (font-variation-settings: normal) {
+	html { font-family: 'Inter var', Helvetica, Arial, sans-serif; } 
 }
 :root {
   --headerBackground: #131313;
@@ -10,7 +21,6 @@
   --weightRegular: 400;
   --weightLight: 300;
   --weightMedium: 500;
-  --weightSemiBold: 600;
   --purple: #4a208e;
   --yellow: #d3a52c;
   --backgroundBody: #fffcfc;
@@ -60,7 +70,7 @@ html[data-theme="dark"] {
 
 html {
   font-size: 18px;
-  font-family: "Poppins";
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
 }
 *:focus {
@@ -70,7 +80,9 @@ html {
 img {
   filter: var(--filterIMG);
 }
-abbr{cursor: help;}
+abbr {
+  cursor: help;
+}
 section:first-of-type {
   z-index: 1;
   position: relative;
@@ -110,7 +122,6 @@ li {
   color: var(--headerLinkActive);
 }
 h2 {
-  font-weight: var(--weightSemiBold);
   font-size: clamp(1.5rem, 4.5vw + 1rem, 3rem);
 }
 :target h2 {
@@ -122,7 +133,7 @@ li {
   list-style-type: none;
 }
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
@@ -163,7 +174,7 @@ h2,
 .navigation ul li a {
   color: var(--headerLinksColor);
   font-weight: var(--weightRegular);
-  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.6rem);
+  font-size: clamp(0.7666666666666666rem, 2.5vw, 1.6rem);
   transition: color 0.116s ease-in;
 }
 
@@ -202,13 +213,15 @@ h2,
 }
 main {
   background-color: inherit;
-
 }
 .introduction {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  align-items:center;
+  justify-content: space-between;
   height: 100vh;
+  width:100%;
   position: relative;
 }
 
@@ -216,13 +229,12 @@ main {
   max-inline-size: 100%;
   object-fit: cover;
   block-size: auto;
-  
+ 
 }
 .introduction .wrapper-image {
   min-width: 145px;
   max-width: 650px;
   cursor: pointer;
-  
 }
 
 .introduction .wrapper-scroll {
@@ -233,6 +245,7 @@ main {
   overflow: hidden;
   width: max-content;
   height: max-content;
+ 
 }
 .introduction .wrapper-scroll .scroll {
   text-transform: uppercase;
@@ -252,10 +265,12 @@ main {
   animation: scroller 2s 2.1s cubic-bezier(0.2, 0, 1, 0.9) 10;
 }
 .introduction h1 {
-  
   margin: 0;
   display: flex;
   flex-direction: column;
+  width:fit-content;
+  align-self:center;
+
 }
 .introduction h1 span:nth-of-type(1),
 .introduction h1 span:nth-of-type(2) {
@@ -265,7 +280,6 @@ main {
 .introduction h1 span:nth-of-type(3),
 .introduction h1 span:nth-of-type(4) {
   line-height: 1.1;
-  font-weight: var(--weightSemiBold);
   font-size: clamp(1.7777777777777777rem, 4.5vw + 1rem, 4.777777777777778rem);
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -292,17 +306,18 @@ main {
 .aboutMe,
 .contact,
 .projects {
-  padding-block: 3em;
+  padding-block: 2em;
 }
 
 .aboutMe p {
   font-weight: var(--weightRegular);
   max-width: 62ch;
   font-size: clamp(1rem, 2.5vw, 1.8rem);
+  line-height: 1.6;
   margin: 0;
   opacity: 0;
   position: relative;
-  bottom: -15px;
+  bottom: -16px;
   transition: bottom 0.8s ease-out, opacity 0.8s ease-out;
 }
 .aboutMe p.show {
@@ -347,7 +362,7 @@ main {
 }
 .projects .slider .card > a .tehnologies {
   position: absolute;
-  bottom: 0.7ex;
+  bottom: 4px;
   right: 0;
   pointer-events: none;
   background-color: var(--colorGlass);
@@ -493,7 +508,7 @@ footer {
 footer a {
   font-weight: var(--weightRegular);
   margin: 0;
-  font-size: clamp(0.6666666666666666rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.7666666666666666rem, 2.5vw, 1.3rem);
   color: var(--headerLinksColor);
   transition: color 0.116s ease-in;
 }
