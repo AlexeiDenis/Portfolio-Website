@@ -70,6 +70,7 @@ html {
 img {
   filter: var(--filterIMG);
 }
+abbr{cursor: help;}
 section:first-of-type {
   z-index: 1;
   position: relative;
@@ -141,10 +142,7 @@ h2,
   will-change: color;
   transition: color 0.4s cubic-bezier(0, 0, 0.38, 0.9);
 }
-.aboutMe p b,
-.projects .slider .card .details p span {
-  color: var(--colorSpan);
-}
+
 .wrapper-dimension {
   width: 95%;
   margin-inline: auto;
@@ -378,7 +376,10 @@ main {
   text-decoration-style: solid;
   text-decoration: underline;
 }
+
+.aboutMe p span,
 .projects .slider .card .details p span {
+  color: var(--colorSpan);
   font-weight: bold;
 }
 .projects .slider .card .details p {
