@@ -5,6 +5,7 @@
   font-style: normal;
   font-named-instance: "Regular";
   src: url("./font/Inter-roman.var.woff2") format("woff2");
+  unicode-range: U+0000-007A; 
 }
 *,
 *::before,
