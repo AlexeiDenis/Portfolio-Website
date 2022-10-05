@@ -333,10 +333,12 @@ main {
 }
 .projects .slider .card {
   border: 3px solid rgba(138, 138, 233, 0.24);
-  padding: 1em;
+  padding: .8em;
   position: relative;
   background-color: var(--colorCard);
   border-radius: 20px 20px 11px 11px;
+  display:flex;
+  flex-direction: column;
 }
 
 .projects .slider .card > a {
@@ -418,9 +420,10 @@ main {
 
 .projects .slider .card .links {
   display: flex;
-  gap: 1em;
   position: absolute;
-  bottom: 0.6em;
+  align-self:center;
+  justify-content: space-around;
+  bottom: 0.8em;
 }
 
 .projects .slider .card .links p {
