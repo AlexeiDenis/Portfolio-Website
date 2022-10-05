@@ -424,6 +424,7 @@ main {
   align-self:center;
   justify-content: space-around;
   bottom: 0.8em;
+  width:100%;
 }
 
 .projects .slider .card .links p {
