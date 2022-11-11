@@ -75,7 +75,6 @@ function setup() {
                 entr.target.classList.add('show');
                 // obs.unobserve(entr.target);
             }
-            else { entr.target.classList.remove('show'); }
         })
     }, options);
     const h1 = document.querySelectorAll('.aboutMe p');
