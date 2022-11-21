@@ -328,8 +328,7 @@ main {
 .projects .slider {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  row-gap: 2em;
-  column-gap: 4em;
+  gap:2em;
 }
 .projects .slider .card {
   border: 3px solid rgba(138, 138, 233, 0.24);
