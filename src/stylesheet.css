@@ -392,6 +392,9 @@ main {
   text-decoration-style: solid;
   text-decoration: underline;
 }
+.projects .slider .card .details p .dribble{
+  color:#ea4c89;
+}
 
 .aboutMe p span,
 .projects .slider .card .details p span {
